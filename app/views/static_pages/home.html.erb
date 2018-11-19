@@ -1,0 +1,130 @@
+<div class="" id="slider">
+    <div id="mainslider" class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="manga-item">
+          <div class="manga-item-img">
+           <%= link_to image_tag("slider_background1.jpg", alt: "") %>
+          </div>
+          <div class="manga-item-text">
+            Hoa bỉ ngạn
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="manga-item">
+          <div class="manga-item-img">
+           <%= link_to image_tag("slider_background1.jpg", alt: "") %>
+          </div>
+          <div class="manga-item-text">
+            Hoa bỉ ngạn
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="manga-item">
+          <div class="manga-item-img">
+           <%= link_to image_tag("slider_background1.jpg", alt: "") %>
+          </div>
+          <div class="manga-item-text">
+            Hoa bỉ ngạn
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="manga-item">
+          <div class="manga-item-img">
+           <%= link_to image_tag("slider_background1.jpg", alt: "") %>
+          </div>
+          <div class="manga-item-text">
+            Hoa bỉ ngạn
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="manga-item">
+          <div class="manga-item-img">
+           <%= link_to image_tag("slider_background1.jpg", alt: "") %>
+          </div>
+          <div class="manga-item-text">
+            Hoa bỉ ngạn
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="manga-item">
+          <div class="manga-item-img">
+           <%= link_to image_tag("slider_background1.jpg", alt: "") %>
+          </div>
+          <div class="manga-item-text">
+            Hoa bỉ ngạn
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" style="margin-top: 40px;">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="popular-manga">
+        <table class="popular-title-top">POPULAR MANGA
+          <ul class="abc">
+          <% @mangaks.each do |mangak| %>
+          <div class="popular-title">
+            <li class="list" style="margin-bottom: 10px">
+              <%= image_tag mangak.picture.url, size: 70 %>
+              <strong><%= link_to mangak.name, mangak %></strong><br>
+              Update: <%= mangak.updated_at %><br>
+              View: <%= mangak.impressionist_count %>
+            </li>
+          </div>
+          <% end %>
+          </ul>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="recent_nav">
+      <%= link_to "Recent update", "#" %>
+      <%= link_to "Hot update", "#" %>
+      <%= link_to "New posts", "#" %>
+      </div>
+      <div class="wrap_update home">
+        <div class="update_item">
+          <ul class="abc">
+          <% @chapters.each do |chapter| %>
+          <div class="popular-title">
+            <li class="list" style="margin-bottom: 10px ">
+              <%= image_tag chapter.mangak.picture.url, size: 70 %>
+              <strong><%= link_to chapter.mangak.name, chapter.mangak %></strong><br>
+              <%= link_to chapter.name_chapter, mangak_chapter_path(chapter.mangak, chapter) %>
+              <br>
+              View: <%= chapter.mangak.impressionist_count %>
+            </li>
+          </div>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <table>
+        <div class="most-read">
+          <span class="feature-title">NEW MANGA</span>
+            <ul class="abc">
+          <% @mangaks_new.each do |mangak| %>
+          <div class="popular-title">
+            <li class="list" style="margin-bottom: 10px">
+              <%= image_tag mangak.picture.url, size: 70 %>
+              <strong><%= link_to mangak.name, mangak %></strong><br>
+              Update: <%= mangak.updated_at %><br>
+              View: <%= mangak.impressionist_count %>
+            </li>
+          </div>
+          <% end %>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

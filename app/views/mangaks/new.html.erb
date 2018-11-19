@@ -1,0 +1,30 @@
+<% provide :title, t(".upload_manga") %>
+<h1><%= t ".upload_manga" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@mangak) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label t(".name_manga") %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label t(".author") %>
+      <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name)  %>
+      <%= link_to t(".new_author"), new_author_path %>
+      <br>
+      <br>
+      <%= f.label t(".genre") %>
+      <%= f.select :genre_id, options_from_collection_for_select(Genre.all, :id, :name)  %>
+      <div class="field" style="margin-bottom: 20px">
+        <%= f.label t(".description") %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+      <span class="picture" >
+      <%= f.label t(".avatar") %>
+      <%= f.file_field :picture %>
+      </span>
+
+      <%= f.submit t(".create") %>
+    <% end %>
+  </div>
+</div>

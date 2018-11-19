@@ -1,0 +1,140 @@
+en:
+  chapters:
+    create:
+      success: "Success"
+      errror: "Error"
+    destroy:
+      destroy: "Destroy"
+      delete_fail: "Delete fail"
+    new:
+      upload_chapter: "Upload chapter"
+      name_chapter: "Name chapter"
+      create: "Create"
+    show:
+      previous: "Previous"
+      next: "Next"
+  authors:
+    create:
+      success: "Success"
+      errror: "Error"
+    new:
+      new_author: "New author"
+      author_name: "Author name"
+      create: "Create"
+  mangaks:
+    create:
+      success: "Success"
+      errror: "Error"
+    destroy:
+      destroy: "Destroy"
+      delete_fail: "Delete fail"
+    index:
+      list_manga: "List manga"
+      delete: "delete"
+      sure: "You sure?"
+      no_reult: "No result"
+    show:
+      new_chapter: "New chapter"
+      description: "Description:"
+      list_chapter: "List chapter"
+      posted: "Posted"
+      ago: "ago."
+      delete: "delete"
+      sure: "You sure?"
+      name_manga: "Name manga:"
+      author: "Author:"
+      genre: "Genre:"
+      view: "View:"
+    new:
+      upload_manga: "Upload manga"
+      name_manga: "Name manga"
+      author: "Author"
+      new_author: "(New author)"
+      genre: "Genre"
+      description: "Description"
+      avatar: "Avatar"
+      create: "create"
+  layouts:
+    application:
+      ror_tutorial: "Mangak"
+    header:
+      manga: "Manga"
+      manga_list: "Manga list"
+      manga_hot: "Manga hot"
+      log_in: "Log in"
+      upload: "Upload"
+      mangak: "Mangak"
+      home: "Home"
+      profile: "Profile"
+      settings: "Settings"
+      account: "Account"
+      users: "User"
+      log_out: "Log out"
+  users:
+    new:
+      sign: "Sign up"
+      sign_up: "Sign up"
+      this: "This will be a signup page for new users"
+      create: "Create my account"
+      confirm: "Confirmation"
+    create:
+      welcome: "Welcome to the Sample App!"
+      user_not_found: "User not found"
+      failed: "Failed"
+      please_check: "Please check your email to activate your account."
+    show:
+      welcome: "Welcome to the Sample App!"
+      user_not_found: "User not found"
+      failed: "Failed"
+    update:
+      profile_updated: "Profile updated"
+    login_in_user:
+      please_login: "Please log in."
+    edit:
+      update: "Update your profile"
+      save: "Save change"
+      change: "change"
+      edit_user: "Edit user"
+      confirmation: "Confirmation"
+    destroy:
+      des: "User destroy"
+      dele_fail: "Delete user failed"
+    find_user:
+      not_found_user: "User not found"
+    index:
+      all_users: "All users"
+    user:
+      sure: "You sure?"
+  shared:
+    error_messages:
+      error: "error"
+      the_form: "The form contains"
+  sessions:
+    new:
+      log_in: "Log in"
+      log: "Log in"
+      new: "New user?"
+      sign_up: "Sign up now!!"
+      remember: "Remember me on this computer"
+    create:
+      invalidemail_passcom: "Invalid email/password combination"
+  user_mailer:
+    account_activation:
+      acc_activation: "Account ativation"
+      user_acc_active: "User Acc Active"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      samapp: "Sample App"
+      hi: "Hi"
+      active: "Active"
+    password_reset:
+      user_pass_reset: "password_reset"
+  account_activation:
+    edit:
+      account_activated: "Account activated!"
+      invalid: "Invalid activation link"
+  comments:
+    create:
+      success: "Success"
+      errror: "Error"
+    destroy:
+      comment_deleted: "Comment deleted"

@@ -1,0 +1,67 @@
+<div class="view" style="background-image:url('/assets/slider_background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+          <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s" style="color: #ffffff;">Log in right now! </h1>
+          <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+          <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s" style="color: #ffffff;"">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi eadolor molestiae, quisquam iste, maiores. Nulla.</h6>
+        </div>
+        <div class="col-md-6 col-xl-5 mb-4">
+          <div class="card wow fadeInRight" data-wow-delay="0.3s">
+            <div class="card-body">
+              <div class="text-center">
+                <h3 class="text-login">
+                  Log in</h3>
+                    <hr class="hr-light">
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                    <div class="field-white">
+                      <%= f.label :email %><br />
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+                    </div>
+
+                    <div class="field-white">
+                      <%= f.label :password %><br />
+                      <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+                    </div>
+
+                    <% if devise_mapping.rememberable? %>
+                    <div class="field-white">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me %>
+                    </div>
+                    <% end %>
+                    <div class="actions" style="text-align: center;">
+                      <%= f.submit "Log in" %>
+                    </div>
+                    <%- if devise_mapping.omniauthable? %>
+                      <%- resource_class.omniauth_providers.each do |provider| %>
+                        <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", user_google_oauth2_omniauth_authorize_path %><br />
+                      <% end -%>
+                    <% end -%>
+                  <% end %>
+                  <%= render "devise/shared/links" %>
+                </div>
+              </div>
+              <hr class="hr-light mb-3 mt-4">
+              <div class="inline-ul text-center d-flex justify-content-center">
+                <a class="p-2 m-2 tw-ic">
+                  <%= link_to image_tag("facebook.svg", alt: ""), "https://www.flaticon.com/authors/lucy-g"  %>
+                </a>
+                <a class="p-2 m-2 li-ic">
+                  <%= link_to image_tag("googleplus.svg", alt: ""), "https://www.flaticon.com/authors/lucy-g"  %>
+                </a>
+                <a class="p-2 m-2 ins-ic">
+                  <%= link_to image_tag("twitter.svg", alt: ""), "https://www.flaticon.com/authors/lucy-g"  %>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<%= form_for(@comment, remote: true) do |f| %>
+<div class="comment_form" style="display: flex">
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="field" style="width: 700px;height: 50px">
+    <%= f.text_area :content, placeholder: "Compose new comment..." %>
+  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :mangak_id, value: params[:id] %>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+</div>
+<% end %>

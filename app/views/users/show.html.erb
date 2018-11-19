@@ -1,0 +1,26 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+<div class="col-md-8">
+    <h3 style="color:green"><%= @title %></h3>
+    <% if @mangaks.any? %>
+      <ul class="users">
+      <% @mangaks.each do |mangak| %>
+      <li>
+        <%= image_tag mangak.picture.url, size: 50 %>
+        <%= link_to mangak.name, mangak %>
+      </li>
+      <% end %>
+      </ul>
+      <%= will_paginate @mangaks %>
+    <% end %>
+  </div>
+</div>
