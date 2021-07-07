@@ -1,0 +1,18 @@
+<% provide :title, t(".list_manga") %>
+<h1><%= t ".list_manga" %></h1>
+<% if @mangaks.any? %>
+<ul class="users">
+  <% @mangaks.each do |mangak| %>
+    <li>
+      <%= image_tag mangak.picture.url, size: 50 %>
+      <%= link_to mangak.name, mangak %>
+      <% if logged_in? && current_user.admin? %>
+    |   <%= link_to t(".delete"), mangak, method: :delete, data: {confirm: t(".sure")} %>
+      <% end %>
+    </li>
+  <% end %>
+<% else %>
+<p style="font-size: 120%; text-align: center"><%= t ".no_result" %></p>
+<% end %>
+</ul>
+<%= will_paginate %>

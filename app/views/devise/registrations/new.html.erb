@@ -1,0 +1,77 @@
+<div class="view" style="background-image:url('/assets/slider_background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+          <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s" style="color: #ffffff;">Sign up right now! </h1>
+          <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+          <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s" style="color: #ffffff;"">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi eadolor molestiae, quisquam iste, maiores. Nulla.</h6>
+        </div>
+        <div class="col-md-6 col-xl-5 mb-4">
+          <div class="card wow fadeInRight" data-wow-delay="0.3s">
+            <div class="card-body">
+              <div class="text-center">
+                <h3 class="text-login">
+                  Sign up</h3>
+                    <hr class="hr-light">
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
+
+                  <div class="field-white">
+                    <%= f.label :name %>
+                    <%= f.text_field :name, autocomplete: "off", class: "form-control" %>
+                  </div>
+
+                  <div class="field-white">
+                    <%= f.label :age %>
+                    <%= f.text_field :age, autocomplete: "off", class: "form-control" %>
+                  </div>
+
+                  <div class="field-white">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+                  </div>
+
+                  <div class="field-white">
+                    <%= f.label :password %>
+                    <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br />
+                    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+                  </div>
+
+                  <div class="field-white">
+                    <%= f.label :password_confirmation %><br />
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+                  </div>
+
+                  <div class="actions" style="text-align: center">
+                    <%= f.submit "Sign up" %>
+                  </div>
+                <% end %>
+
+            <%= render "devise/shared/links" %>
+                </div>
+              </div>
+              <hr class="hr-light mb-3 mt-4">
+              <div class="inline-ul text-center d-flex justify-content-center">
+                <a class="p-2 m-2 tw-ic">
+                  <%= link_to image_tag("facebook.svg", alt: ""), "https://www.flaticon.com/authors/lucy-g"  %>
+                </a>
+                <a class="p-2 m-2 li-ic">
+                  <%= link_to image_tag("googleplus.svg", alt: ""), "https://www.flaticon.com/authors/lucy-g"  %>
+                </a>
+                <a class="p-2 m-2 ins-ic">
+                  <%= link_to image_tag("twitter.svg", alt: ""), "https://www.flaticon.com/authors/lucy-g"  %>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<% provide :title %>
+<h1><span style="color: green; font-size: 200%"><%= @genre.name %></span></h1>
+<ul class="genre">
+  <% @genre.mangaks.each do |mangak| %>
+    <li>
+      <%= image_tag mangak.picture.url, size: 50 %>
+      <%= link_to mangak.name, mangak %>
+    </li>
+  <% end %>
+</ul>
+

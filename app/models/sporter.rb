@@ -1,0 +1,2 @@
+class Sporter < ApplicationRecord
+end

@@ -1,0 +1,18 @@
+<% provide :title, "Manga hot" %>
+<h1><%= t "Manga hot" %></h1>
+<% if @mangaks_hot.any? %>
+<ul class="users">
+  <% @mangaks_hot.each do |mangak| %>
+    <li>
+      <%= image_tag mangak.picture.url, size: 50 %>
+      <strong><%= link_to mangak.name, mangak %></strong>
+      | view: <%= mangak.impressionist_count %>
+      <% if logged_in? && current_user.admin? %>
+    |   <%= link_to t(".delete"), mangak, method: :delete, data: {confirm: t(".sure")} %>
+      <% end %>
+    </li>
+  <% end %>
+<% else %>
+<p style="font-size: 120%; text-align: center"><%= t ".no_result" %></p>
+<% end %>
+</ul>

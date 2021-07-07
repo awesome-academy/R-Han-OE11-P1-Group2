@@ -1,0 +1,22 @@
+<% provide :title, t(".upload_chapter") %>
+<h1><%= t ".upload chapter" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [@mangak,@chapter], html: {multipart: true} do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label t(".name_chapter") %>
+      <%= f.text_field :name_chapter, class: "form-control" %>
+
+      <%= f.fields_for :images do |p| %>
+      <div class="field">
+        <%= p.label :images %><br>
+        <%= p.file_field :image, multiple: true, name: "images[image][]" %>
+      </div>
+      <% end %>
+
+      <%= f.submit t(".create") %>
+    <% end %>
+  </div>
+</div>
+
